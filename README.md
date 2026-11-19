@@ -15,10 +15,12 @@ opracowana na podstawie maszynopisu MPK Łódź *„Opis aparatury elektrycznej 
 | `szablon_wygladu.md` | Projekt graficzny instrukcji (A5, układ 3-kolumnowy, zakładki rozdziałów) |
 
 ## Stan prac
-- ✅ Przepisane rozdz. **1–19** (s. 1–129): pantograf, silniki, styczniki, rozrusznik, przekaźniki,
-  hamulce szczękowe i szynowe, stanowisko/pulpit/nastawnik, bezpieczniki, tablice aparatowe,
-  przetwornica, akumulatory, przekształtnik 40/24 V, maszyna drzwiowa.
-- ⬜ Do uzupełnienia: rozdz. **20–24** (s. 130–150: oświetlenie, dzwonki, grzejniki,
-  sterowanie ukrotnione, uszynienie), strony 20–21, 26–27, 29–31, 37; część II (schematy).
+- ✅ **Część I maszynopisu KOMPLETNA – rozdz. 1–24 (s. 1–151):** wiadomości ogólne, pantograf,
+  odgromnik, odłącznik, silniki, bocznik, styczniki, przekaźniki, rozrusznik, hamulce szczękowe
+  i szynowe, stanowisko/pulpit/nastawnik, bezpieczniki, tablice aparatowe, przetwornica, regulator,
+  akumulatory, przekształtnik 40/24 V, maszyna drzwiowa, oświetlenie, dzwonki, grzejniki,
+  sterowanie ukrotnione, uszynienie.
+- ⬜ Do zdobycia: **część II opracowania** (współpraca obwodów, schematy ideowe, programy łączeń),
+  jeśli istnieje jako osobny tom.
 
 *Zdjęcia maszynopisu nie są częścią repozytorium.*

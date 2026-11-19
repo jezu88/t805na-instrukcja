@@ -1,7 +1,7 @@
 {
   "pojazd": "Konstal 805Na",
-  "wersja_danych": "0.2",
-  "zrodlo": "Maszynopis MPK Łódź – opis aparatury elektrycznej 805Na, rozdz. 1-19 (s. 1-129)",
+  "wersja_danych": "0.3",
+  "zrodlo": "Maszynopis MPK Łódź – opis aparatury elektrycznej 805Na, część I kompletna, rozdz. 1-24 (s. 1-151)",
   "ostrzezenie": "Pomoc szkoleniowa. Obowiązują instrukcje przewoźnika i polecenia dyspozytora.",
   "usterki": [
     {
@@ -120,7 +120,10 @@
     "nad_drzwiami": ["tablice TDPm", "przekaźniki drzwi PD1–PD4 (PSF-534)", "maszyna drzwiowa (silnik PASOřc12 32 V)"],
     "pod_pudlem": ["przetwornica PTA-44", "bateria akumulatorów 5x5 6G100H", "regulator napięcia RNT-731", "przekształtnik 40/24 V (PtR)"],
     "stanowisko_motorniczego": ["pulpit (łączniki ŻR/ŻOT/ŁLW..., lampki ŻSM1/LSP1/LSS1/LS21/LSD1/LSJ/LSK)", "nastawnik DAT-681 z rezystorem GRS-325", "pedały jazdy/hamowania/czuwaka", "wycieraczka (silnik MWS 24 V)"],
-    "wozki": ["4 silniki LTa-220", "4 hamulce szczękowe + luzowniki HT-3", "4 hamulce szynowe HS-3"],
+    "wozki": ["4 silniki LTa-220", "4 hamulce szczękowe + luzowniki HT-3", "4 hamulce szynowe HS-3", "linki i gniazda uszyniające ZW1-ZW4"],
+    "oswietlenie": ["wewnetrzne: swietlowki 40 V + stateczniki PT-3 (oprawy OK-20p) + zarowki", "zewnetrzne: reflektory typ 136 BA20d 45/40 W, lampy 620/621", "stopnie drzwi: zarowki BA15s sterowane krzywka drzwi"],
+    "ogrzewanie": ["nawiewne (cieplo z rezystorow rozrusznika)", "grzejniki pasazerow 10GKa 700 W", "grzejnik kabiny OT-100 600 W", "grzejniki szyb OS-00100 250 W"],
+    "zlacza_ukrotnienia": ["805Na/p1: PSK 36 kontaktow", "805Na/p3: gniazda KOL + wtyki KOM", "jednobiegunowe KP (uszynienie)"],
     "skrzynia_aparatowa": ["TSK3b", "TSK4", "TSK5b", "TDM", "TRMRr", "TZA1/2", "SG4 (SU 320 Tr)", "silnik rozrusznika PZSOb12a"],
     "skrzynia_rozrusznika": ["rozrusznik GBT-373", "rezystory wstępne AZT-151 RR1–RR3"],
     "szafka_aparatowa": ["TBN", "TBW", "TŁS", "TSR7", "TSR8", "TAP4", "TAP5b", "TP2b/TP21b", "TDg", "TŁO", "TRPSR1"]

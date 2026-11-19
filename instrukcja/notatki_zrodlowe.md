@@ -227,9 +227,69 @@ Większość aparatów w **szafie aparatowej** i **skrzyni aparatowej**. Różni
 
 ---
 
-## BRAKI W ZDJĘCIACH (stan po 2. partii, 2026-11-19)
-- **Uzupełnione:** rozdz. 10–19 (s.64–129) — hamulec szczękowy, hamulce szynowe, stanowisko/pulpit/nastawnik/wycieraczka, bezpieczniki, tablice aparatowe (komplet), przetwornica, regulator napięcia, akumulatory, przekształtnik 40/24 V, maszyna drzwiowa.
-- **Nadal brak stron:** 20–21 (początek bocznika), 26–27, 29–31 (SNF, STT), 37 (?).
-- **Nadal brak rozdz. 20–24 (s.130–150):** 20 oświetlenie (wewn./statecznik/zewn.), 21 dzwonki sygnałowe, 22 grzejniki elektryczne, 23 złącza sterowania ukrotnionego, 24 uszynienie wagonu.
-- Niektóre ostatnie wiersze tablic 14.3 (TSR7 starszy – dalsza lista diod) ucięte na dole kadru p23.
-- Część II opracowania (współpraca obwodów, schematy, programy łączeń) – nie sfotografowana.
+---
+
+# UZUPEŁNIENIE 3: brakujące strony + rozdz. 20–24 (s.20–21, 26–31, 37, 130–151)
+Źródło: zdjęcia ../805na_cz3/ (17 szt., seria IMG_..._1837–1841, numeracja q01–q17). Rozkładówki 2 stron. Spis treści potwierdzony (q17).
+
+## 6. Bocznik indukcyjny – uzupełnienie (s.20–21)
+- Służy do bocznikowania uzwojeń magnesujących silnika, zmniejsza strumień magnetyczny → wyższe prędkości obrotowe niż w silniku niebocznikowanym; pozwala obniżyć prędkości końca rozruchu oporowego przy zachowaniu prędkości maksymalnych → ekonomiczniejsza jazda.
+- W 805Na **jeden bocznik dla obu grup silników**. Zbudowany z **6 cewek dwóch rodzajów (A i B)** na wspólnym rdzeniu, dołączonych równolegle do uzwojeń wzbudzenia obu grup. Rys.6.1 (zaciski T29,T27,T12,T13,T15), rys.6.2 schemat połączeń (zaciski 110–126).
+
+## 7.1 Styczniki SNF – uzupełnienie (s.27–29)
+- Jednobiegunowe prądu stałego, napięcie sterownicze znamionowe Un=40 V, działają poprawnie w zakresie 0,6–1,05 Un (24–42 V). Występują też SNF z cewką 220 V (SMW2). Praca −10…+40 °C, wilgotność do 75%.
+- **Oznaczenie SNF-xyz:** x = rodzaj (1 – z cewką wydmuchową, 2 – z magnesami trwałymi); y = rodzaj/liczba zestyków pomocniczych (0 brak, 1 = 1r, 2 = 1z, 3 = 2z, 4 = 2r, 5 = 1r+1z); z = prąd ciągły zestyku głównego (0=2A, 9=4A, 7=6A, 6=10A, 5=16A, 3=30A, 2=40A, 1=52A). Przykład: **SNF-151** = cewka wydmuchowa, 1r+1z, 52 A.
+- Dane SNF: izolacja 800 V, napięcie łączeniowe 600 V, sterownicze 220 V / 40 V, masa 2,8 kg. Montaż tylko na płytach izolacyjnych grubości 10–16 mm.
+- **Tablica 7.2 (wykaz styczników 805Na, nowszy typ)** – typy wg kolumn SNF-101/105/106/139/143/151/153/155/156, STT-150-1/2, SU320Tr, SUT300-4; miejsca: SBW1–4/SBH/SBHR→TSR8, SG1–3/SH3/SJ1–3/SL→TSK3b, SG4→TSK5b, SH1–2→TSK4, SM→TSR7/podwozie, SMW1→podwozie, SMW2/SO1/SO2/SOW→TSR7, SOW1→TSR8, SR1–2→TSR8, SR3–5→TSK5b, SR6→TSK5b?, SW→TSK4, SZH1/SZH2→TAP4.
+
+## 7.2 Styczniki STT – uzupełnienie (s.30–31)
+- STT-150 jednobiegunowe, bez obudowy, wykonania 1 i 2. **STT-150-1** – styki główne z nakładkami srebrnymi, przerywa prąd do 600 A doryw.; **STT-150-2** – styki miedziane posrebrzane, NIE przystosowany do przerywania prądu. Praca −25…+35 °C.
+- Dane STT-150: izolacja 800 V, łączeniowe 600 V, prąd ciągły 150 A, łączeniowy zwykły 150 A / dorywczy 600 A (wyk.1), prąd krytyczny 3 A, sterowanie 40 V (0,6–1,5 Un, 24–42 V), moc napędu 23,6 W, czas zał. 230 ms / otw. 60 ms, zestyki pomocnicze 1r+2z (10 A), masa 8 kg.
+
+## 7.4 Stycznik liniowy SUT-300 – schemat (s.36–37)
+- Rys.7.6 schemat SUT-300: **Lp** – cewka napędowa (prądowa nadmiarowa, T2), **Lt** – cewka podtrzymująca, **Pp** – styki przyłączeniowe napięcia sterowania (311), **Sg** – styki SL główne (T3), **Lw** – cewka wydmuchowa, **Ln** – cewka napędowa (314), styki pomocnicze 300/313/315/317.
+- **Regulacja prądu zadziałania:** śruba zmienia naciąg sprężyny odciągającej zworę PGA-115. Dla 805Na nastawa **600 A**; jeśli zadziała przy mniejszym prądzie → zwiększyć naciąg, jeśli nie rozłącza → zmniejszyć (praca warsztatowa z zasilaczem prądowym).
+- Dane SUT-300: izolacja 800 V, łączeniowe 600 V, ciągły 300 A, łączeniowy zwykły 300 A / dorywczy 1200 A, sterowanie 40 V (0,6–1,05 Un, 24–42 V), moc 57 W, czas wł. 400 ms / otw. 60 ms, 2z+1r (10 A), prąd nastawczy przekaźnika 550–750 A (w 805Na 600 A), masa 43,5 kg.
+
+## 20. Urządzenia oświetlenia wagonu (s.130–138)
+### 20.1 Oświetlenie wewnętrzne
+- Świetlówki + żarówki. Żarówki 12 W / 28 V (oprawy BA 15s, po dwie nad drzwiami) – doświetlenie stopni drzwi, sterowane łącznikiem krzywkowym drzwi.
+- Świetlówki: wnętrze, tablice informacyjne, stanowisko, oświetlenie awaryjne. Świetlówki 40 W zasilane 40 V przez indywidualne **stateczniki PT-3 25 W 36 V**. Starsze wagony: świetlówki + stateczniki w oprawach **OK-20p**; nowsze – do tablic i stanowiska żarówki.
+### 20.2 Statecznik PT-3 (s.131–133)
+- Rys.20.3 schemat: tranzystory T1,T2 + uzwojenia (5,6,7 kolektorowe, 2,3,4 sprzężenie zwrotne) = samowzbudna przetwornica przeciwsobna; dioda D1 chroni przed odwróceniem biegunowości, R2/R3 polaryzacja, C1 eliminacja zakłóceń, C2+R1+D2 regulacja dynamiczna. Świetlówka LF25W. Obwód zapłonowy: uzw. 13,14 + C4 + D3 + R4 (C4 ładuje się i dostarcza napięcie zapłonu). Rys.20.4 widok bez obudowy.
+### 20.3 Oświetlenie zewnętrzne (s.134–138)
+- Reflektory, światła pozycyjne, kierunkowskazy, światło „stop”, oświetlenie numeru linii.
+- Przednia ściana: 2 reflektory typu **136** z żarówką dwużarnikową **BA20d 24V 45/40W** (45 W drogowe, 40 W mijania), 2 światła pozycyjne, 2 kierunkowskazy, oświetlenie numeru linii (BA15d 24V 25W). Kierunkowskaz+pozycyjne w lampach **620 (prawa) / 621 (lewa)**: BAY15d 24V 20/7W (kierunkowskaz, klosz żółty) + BA15d 24V 5W (pozycyjne, klosz biały).
+- Boczne ściany: lampy 620/621 klosz żółty, po 2 żarówki BA15d 24V 5W (kierunkowskazy).
+- Tylna ściana: 2 lampy 620/621 klosz czerwony+żółty, żarówki BA15d 24V 20/7W – żółty = kierunkowskaz, czerwony = światło hamowania „stop” (żarnik 20 W) + pozycyjne (żarnik 7 W). Rys.20.5 (przód, gniazda KOL), 20.6 (tył, gniazda KOL).
+- **Przerywacz kierunkowskazów:** starsze **DLB5** (TP2b, rys.20.7), nowsze **elektroniczny PEK** (TP-21b, rys.20.8).
+
+## 21. Dzwonki sygnałowe (s.139–140)
+- Dwa rodzaje: zewnętrzny i wewnętrzne.
+- **Zewnętrzny** (typ okrętowy, rys.21.1): sygnalizacja ostrzegawcza ORAZ sygnalizacja zaniku napięcia zasilania awaryjnego hamulców szynowych / zasilanie hamulców z układu awaryjnego. Dane: typ **HD3500-06**, 24 V, 20 VA.
+- **Wewnętrzne** (rys.21.2): po jednym przy każdych drzwiach i na pomoście przednim; funkcje sygnalizacyjne (pomost przedni – dodatkowe funkcje w części II, rozdz.3.3.1.9). Dane: typ **DS3**, 20–30 V, 600 Ω.
+
+## 22. Grzejniki elektryczne (s.141–144)
+- Dwa rodzaje ogrzewania: **nawiewne** (powietrze chłodzące segmenty oporowe rozrusznika wdmuchiwane do wnętrza; sterowane klapą kanałów nawiewu) oraz **grzejnikami z sieci trakcyjnej** (prąd „świeży”).
+- 3 rodzaje grzejników na prąd „świeży”:
+  - **Przedziału pasażerów** (rys.22.1): element grzejny w rurze na 3 izolatorach, w kanałach grzewczych wzdłuż ścian na poziomie podłogi. Typ **10GKa**, 600 V, probiercze 3000 V, moc **700 W**.
+  - **Kabiny motorniczego** (rys.22.2): obudowa dwuczęściowa, przed ścianą czołową. Typ **OT-100**, 600 V, probiercze 4000 V, moc **600 W**, żywotność 5 lat, masa 5 kg.
+  - **Grzejniki szyb** (rys.22.3): rurowy element grzejny w obudowie z blachy z dwiema szczelinami/prowadnicami – rozpływ powietrza na szybę. Typ **OS-00100**, 600 V, probiercze 3 kV, napięcie znamionowe 165 V, moc **250 W**, masa 0,6 kg.
+
+## 23. Złącza sterowania ukrotnionego (s.145–149)
+- Międzywagonowe wielobiegunowe – elektryczne łączenie obwodów rozrządu wagonów (pierwszy = sterujący): przesyłanie impulsów sterujących do wagonów sterowanych oraz sygnałów zwrotnych o stanie obwodów. Złącze jednobiegunowe – połączenie obwodów uszynienia wagonów pociągu.
+- **805Na/p1:** złącza wielobiegunowe **PSK, 36 kontaktów** (rys.23.1 gniazdo na tylnej ścianie).
+- **805Na/p3:** złącza wielobiegunowe **KO** = 2 gniazda **KOL** (rys.20.5/20.6) + 2 wtyki **KOM** (rys.23.2); gniazda na przedniej i tylnej ścianie; wtyki połączone przewodem giętkim wielożyłowym w izolacji gumowej. Rys.23.3 (łącze do PSK), 23.4 (wtyczka dla KOM).
+- Dane złącza KO: izolacja 250 V, probiercze 2000 V, prąd cieplny styków 10 A, przewód 1,5 mm², długość 2 m, masa gniazda KOL 4,0 kg, złącza KOM 8,0 kg.
+- Złącze jednobiegunowe **KP** (gniazda KPL + wtyki KPM, otulina skórzana): izolacja 250 V, probiercze 2000 V, prąd cieplny 25 A, długość 2 m, masa gniazda 1,5 kg, wtyków 2,5 kg.
+
+## 24. Uszynienie wagonu (s.150–151)
+- Prąd z obwodów odprowadzany do szyn przez uszynienie. Ponieważ wózek i koła mają elementy gumowe (izolujące obręcze), stosuje się **linki uszyniające** łączące koła bose z obręczami (rys.24.2) oraz na każdej osi **gniazda ze szczotkami uszyniającymi** (rys.24.3).
+- Gniazda uszyniające **ZW1–ZW4** połączone z zaciskami tablic **TZM1–TZM4** i TZA2, TZP, TSK5 oraz złączami jednobiegunowymi **GnIP i GnIT**. Rys.24.1 schemat obwodu uszynienia (zaciski A58, A19, A14–A23, A06).
+
+---
+
+## BRAKI W ZDJĘCIACH (stan po 3. partii, 2026-11-19)
+- **CZĘŚĆ I KOMPLETNA:** rozdz. 1–24 (s.1–151) przepisane w całości. Spis treści potwierdzony.
+- **Nadal brak: część II opracowania** – „współpraca obwodów, schematy, programy łączeń” (przywoływana m.in. jako rozdz. 2 cz.II, 3.3.1.9, 3.3.11, rys. 46). Jeśli jest dostępna osobno – do sfotografowania.
+- Drobiazg: ostatnie wiersze tablicy 14.3 (TSR7 starszy – dalsza lista diod) nadal ucięte na dole kadru p23 (część I); reszta rozdz. 14 kompletna.

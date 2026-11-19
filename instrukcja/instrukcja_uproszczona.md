@@ -1,7 +1,7 @@
 # Tramwaj Konstal 805Na – uproszczona instrukcja i postępowanie przy usterkach
 
-> **Wersja robocza 0.2** – opracowana na podstawie maszynopisu MPK Łódź „opis aparatury elektrycznej wagonu 805Na”, **rozdz. 1–19 (s. 1–129)**.
-> Rozdziały 20–24 (oświetlenie, dzwonki, grzejniki, sterowanie ukrotnione, uszynienie – s. 130–150) oraz pojedyncze strony 20–21, 26–27, 29–31, 37 **nie zostały jeszcze sfotografowane** – sekcje oznaczone ⚠️ czekają na uzupełnienie.
+> **Wersja robocza 0.3** – opracowana na podstawie maszynopisu MPK Łódź „opis aparatury elektrycznej wagonu 805Na”, **część I kompletna: rozdz. 1–24 (s. 1–151)**.
+> Do uzupełnienia pozostaje jedynie **część II opracowania** (współpraca obwodów, schematy, programy łączeń) – jeśli jest dostępna osobno.
 > Dokument jest pomocą szkoleniową. **Obowiązujące są przepisy i instrukcje przewoźnika oraz polecenia dyspozytora.**
 
 ---
@@ -120,6 +120,11 @@
 **Dane:** praca ciągła 150 A na silnik, praca godzinna 157 A, maks. chwilowo 314 A przez 30 s. Chłodzenie wymuszone (wentylator).
 **Postępowanie:** zgłoś usterkę. Sprawdź, czy słychać wentylatory chłodzenia. ⚠️ Szczegóły w rozdz. 2 części II.
 
+### 3.9 Dzwonek zewnętrzny dzwoni sam / brak oświetlenia lub ogrzewania
+**Dzwonek zewnętrzny (HD3500-06):** poza sygnałem ostrzegawczym służy też do **sygnalizacji zaniku napięcia zasilania awaryjnego hamulców szynowych**. Jeśli dzwoni samoczynnie – sprawdź zasilanie NN (jak w 3.4) i zgłoś usterkę układu awaryjnego hamulców.
+**Oświetlenie:** wewnętrzne = świetlówki 40 V przez stateczniki PT-3 (starsze w oprawach OK-20p) + żarówki; stopni drzwi – żarówki sterowane krzywką drzwi. Zewnętrzne: reflektory typ 136 (BA20d 45/40 W), lampy 620/621. Pojedyncza niesprawna oprawa/statecznik → wymiana warsztatowa; sprawdź bezpieczniki oświetlenia.
+**Ogrzewanie:** nawiewne (ciepło z rezystorów rozrusznika, sterowane klapą) + grzejniki z sieci 600 V (pasażerów 10GKa 700 W, kabiny OT-100 600 W, szyb OS-00100 250 W). Brak ogrzewania → sprawdź łączniki ŻOT/ŻOM/ŻOS i bezpieczniki WN; grzejniki na 600 V – usterka to zgłoszenie warsztatowe.
+
 ---
 
 ## 4. Ściąga – gdzie co jest (wg rozdz. 14 – tablice aparatowe)
@@ -165,12 +170,16 @@
 
 ---
 
-## 6. Do uzupełnienia (potrzebne zdjęcia)
+## 6. Stan opracowania
 
+**Część I maszynopisu – KOMPLETNA (rozdz. 1–24, s. 1–151):**
+- [x] s. 1–63: wiadomości ogólne, pantograf, odgromnik, odłącznik, silniki, bocznik, styczniki, przekaźniki, rozrusznik
 - [x] s. 64–73: hamulec szczękowy, luzownik, regulacja, hamulce szynowe
-- [x] s. 74–89: **stanowisko i pulpit motorniczego, nastawnik**, wycieraczka
-- [x] s. 90–111: **bezpieczniki, wyłączniki nadmiarowe, tablice aparatowe**
+- [x] s. 74–89: stanowisko i pulpit motorniczego, nastawnik, wycieraczka
+- [x] s. 90–111: bezpieczniki, wyłączniki nadmiarowe, tablice aparatowe
 - [x] s. 112–129: przetwornica, regulator napięcia, akumulatory, przekształtnik 40/24 V, maszyna drzwiowa
-- [ ] **s. 130–150: oświetlenie, dzwonki, grzejniki, sterowanie ukrotnione, uszynienie** ← pozostało do sfotografowania
-- [ ] brakujące strony: 20–21, 26–27, 29–31, 37
-- [ ] część II opracowania (schematy i współpraca obwodów), jeśli jest dostępna
+- [x] s. 130–151: oświetlenie, dzwonki, grzejniki, sterowanie ukrotnione, uszynienie
+- [x] brakujące wcześniej strony 20–21, 26–31, 37 – uzupełnione
+
+**Do zdobycia:**
+- [ ] **część II opracowania** (współpraca obwodów, schematy ideowe, programy łączeń), jeśli istnieje osobny tom
