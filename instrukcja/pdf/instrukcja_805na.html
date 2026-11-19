@@ -27,6 +27,8 @@
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
   }
   .chapter{ page-break-before:always; position:relative; padding-right:15mm; }
+  .chapter:last-of-type{ page-break-after:avoid; }
+  body > section:last-child{ overflow:hidden; }
   .cover{ page:cover; page-break-after:always; position:relative; width:148mm; height:210mm; overflow:hidden; }
 
   /* ---------- OKŁADKA (flaga Łodzi: żółć nad czerwienią) ---------- */
@@ -84,7 +86,7 @@
   td{ border-bottom:0.4pt solid #bbb; padding:0.7mm 1.4mm; vertical-align:top; }
   tr:nth-child(even) td{ background:#f4f4f4; }
 
-  .toc{ margin:4mm auto 0; width:70%; }
+  .toc{ margin:3mm auto 0; width:72%; }
   .toc .row{ display:flex; align-items:baseline; margin-bottom:1.2mm; font-size:10pt; }
   .toc .row .t{ text-transform:uppercase; font-weight:700; }
   .toc .row .d{ flex:1; border-bottom:1pt dotted #888; margin:0 1.5mm 1pt; }
@@ -246,12 +248,22 @@
     <h4>Pantograf iskrzy / traci kontakt</h4>
     <p>Docisk 69±7 N. Jedź bez gwałtownego poboru prądu; przy uszkodzeniu mechanicznym opuść pantograf.</p>
     <div class="warn"><div class="bar">Pożar / dym / swąd</div><div class="body">Zatrzymaj, OPUŚĆ PANTOGRAF (linka), ewakuuj pasażerów, powiadom dyspozytora i straż. Gaś tylko gaśnicą do urządzeń elektrycznych po opuszczeniu pantografu.</div></div>
+  </div>
+</section>
 
-    <h3 style="column-span:all">Uszkodzenie zespołów — izolacja</h3>
-    <div class="warn" style="column-span:all"><div class="bar">Weryfikacja</div><div class="body">Pozycje łączników sterowniczych (ŁGM, ŁS, ŁRA, ŁDG) i procedury odcięcia uszkodzonego wagonu w ukrotnieniu są w części II opracowania i w instrukcji ruchowej przewoźnika. Poniżej zasada ogólna — potwierdź z instrukcją ruchową.</div></div>
-
+<!-- ============ 5b. W RAZIE AWARII (cd.) — ZESPOŁY ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab on">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 5 · cd.</div><h2>Uszkodzenie zespołów</h2></div>
+  <div class="warn"><div class="bar">Weryfikacja</div><div class="body">Pozycje łączników sterowniczych (ŁGM, ŁS, ŁRA, ŁDG) i procedury odcięcia uszkodzonego wagonu w ukrotnieniu są w części II opracowania i w instrukcji ruchowej przewoźnika. Poniżej zasada ogólna — potwierdź z instrukcją ruchową.</div></div>
+  <div class="cols">
     <h4>Uszkodzenie rozrusznika (GBT-373)</h4>
-    <p>Bez rozrusznika brak rozruchu i hamowania ED. Objawy: brak reakcji na pedał, LSJ gaśnie. Hamuj szynowym/czuwakiem. Jazda sparowana — prowadź z wagonu sprawnego, uszkodzony odetnij (❗ wg instr. ruchowej). Pojedynczy — zjazd/holowanie, luzowniki odhamuj ręcznie.</p>
+    <p>Bez rozrusznika brak rozruchu i hamowania ED. Objawy: brak reakcji na pedał, LSJ gaśnie. Hamuj szynowym/czuwakiem. Jazda sparowana — prowadź z wagonu sprawnego, uszkodzony odetnij (wg instr. ruchowej). Pojedynczy — zjazd/holowanie, luzowniki odhamuj ręcznie.</p>
 
     <h4>Spalenie / zwarcie silnika (LTa-220)</h4>
     <p>4 silniki w 2 grupach po 2. Zwarcie → SUT-300 wybija (~600 A) lub padają bezp. WN. Objawy: swąd/dym, iskrzenie, stycznik wybija po ruszeniu. <b>Nie ponawiaj prób</b> — opuść pantograf (jak pożar), wezwij pogotowie. Odłączanie grupy silników tylko wg instrukcji — nie „na czucie".</p>
