@@ -1,0 +1,12 @@
+# Zdjęcia maszynopisu (źródła, ciężkie – trzymane lokalnie / na Google Drive)
+805na/
+805na_cz2/
+nowe_zdjecia/
+*.zip
+*.pdf
+*.jpg
+*.jpeg
+*.ppm
+# Środowiska / śmieci
+.venv*/
+__pycache__/

@@ -1,0 +1,128 @@
+{
+  "pojazd": "Konstal 805Na",
+  "wersja_danych": "0.2",
+  "zrodlo": "Maszynopis MPK Łódź – opis aparatury elektrycznej 805Na, rozdz. 1-19 (s. 1-129)",
+  "ostrzezenie": "Pomoc szkoleniowa. Obowiązują instrukcje przewoźnika i polecenia dyspozytora.",
+  "usterki": [
+    {
+      "id": "stycznik_liniowy_wybil",
+      "tytul": "Utrata napędu – wybił stycznik liniowy",
+      "objawy": ["nagła utrata napędu", "brak reakcji na pedał jazdy"],
+      "przyczyny": ["zadziałanie PGA-115 w SUT-300 przy prądzie > ~600 A (przeciążenie/zwarcie)"],
+      "kroki": [
+        "Zdejmij nogę z pedału jazdy, drążek kierunku na zero.",
+        "Reset = przerwanie i ponowne podanie sterowania: wyłącz i załącz łącznik jazdy ŻR (kluczyk/stacyjka), co odcina cewkę trzymającą stycznika.",
+        "Ruszaj łagodnie.",
+        "Jeśli wybija ponownie – nie próbuj dalej, zgłoś dyspozytorowi, wezwij pogotowie techniczne."
+      ],
+      "kompletne": true,
+      "strony": [34, 35, 36, 37, 78]
+    },
+    {
+      "id": "zly_rozruch",
+      "tytul": "Szarpanie / brak przyspieszenia przy rozruchu",
+      "objawy": ["szarpanie", "wolny rozruch", "brak przyspieszenia mimo pedału"],
+      "przyczyny": ["rozregulowany PSR (PST-257a)", "silnik rozrusznika / sprzęgło cierne", "styczniki SG / przekaźnik PUR", "niskie napięcie sieci (<400 V)"],
+      "kroki": [
+        "Sprawdź, czy inne tramwaje jadą normalnie (napięcie sieci).",
+        "Przy powtarzaniu się – zgłoś usterkę rozruchu.",
+        "Regulacja PSR – tylko warsztat."
+      ],
+      "kompletne": true,
+      "strony": [1, 2, 4, 46, 47, 48, 49, 55, 60]
+    },
+    {
+      "id": "slabe_hamowanie_ed",
+      "tytul": "Słabe hamowanie elektrodynamiczne",
+      "objawy": ["wydłużona droga hamowania pedałem"],
+      "przyczyny": ["usterka rozrusznika / PSR", "przerwa w obwodzie silników"],
+      "kroki": [
+        "Zwiększ odstęp, zmniejsz prędkość.",
+        "Przy małych prędkościach dołącza się I stopień hamulców szczękowych; w razie potrzeby użyj hamulca szynowego / czuwaka (II stopień + szynowe).",
+        "Zgłoś usterkę, dalsza jazda tylko za zgodą dyspozytora."
+      ],
+      "kompletne": true,
+      "strony": [6, 64, 70]
+    },
+    {
+      "id": "zanik_sterowania",
+      "tytul": "Samoczynne mocne hamowanie (II stopień), brak możliwości ruszenia",
+      "objawy": ["wagon sam zahamował szczękowymi", "brak reakcji aparatów"],
+      "przyczyny": ["zanik napięcia sterowania 40/24 V -> luzowniki bez zasilania, sprężyna dociska szczęki (II stopień)", "akumulatory / przetwornica PTA-44 / przekształtnik 40/24 V / bezpieczniki TBN"],
+      "kroki": [
+        "Sprawdź lampki: ŻSM1 świeci = przetwornica nie pracuje; LSP1 świeci ciągle = brak napięcia 40 V.",
+        "Sprawdź odłącznik akumulatorów ODAk (ON-2) na tablicy TBN – czy załączony.",
+        "Sprawdź bezpieczniki NN na TBN (12 bezp. topikowych / wyłączniki S-161 w nowszych); B8/B15/B16 dotyczą obwodu 40 V.",
+        "Przekształtnik 40/24 V po zwarciu blokuje się – wyłącz i ponownie załącz zasilanie (reset).",
+        "Brak powrotu napięcia -> zgłoś usterkę; do zjazdu/holowania odhamuj luzowniki ręcznie (dźwigienki w poziom)."
+      ],
+      "kompletne": true,
+      "strony": [6, 64, 90, 118, 124]
+    },
+    {
+      "id": "drzwi",
+      "tytul": "Usterka drzwi",
+      "objawy": ["drzwi nie otwierają / nie zamykają"],
+      "przyczyny": ["maszyna drzwiowa zasilana z przetwornicy 40 V -> brak napięcia sieci / wyłączona przetwornica = brak napędu drzwi", "przekaźnik PSF-534 / tablica TDPm nad drzwiami", "silnik drzwi PASOřc12 / sprzęgło / krzywki CUM"],
+      "kroki": [
+        "Przy zaniku napięcia sieci lub wyłączonej przetwornicy drzwi nie działają elektrycznie – otwórz je RĘCZNIE (mechanizm ręczny przy drzwiach).",
+        "Jedne drzwi niezamknięte -> lampka LSD1 nie zaświeci, rozruch może być zablokowany (blokada rozruchu z otwartymi drzwiami).",
+        "Zgłoś usterkę; sprawdzenie PD/PSF-534 i TDPm to czynność warsztatowa."
+      ],
+      "kompletne": true,
+      "strony": [53, 54, 126, 127, 128, 129]
+    },
+    {
+      "id": "pozar",
+      "tytul": "Dym, swąd, iskrzenie, pożar",
+      "objawy": ["dym", "swąd spalenizny", "iskrzenie"],
+      "przyczyny": [],
+      "kroki": [
+        "Zatrzymaj wagon, opuść pantograf (linka w kabinie).",
+        "Ewakuuj pasażerów, powiadom dyspozytora i straż.",
+        "Gaś tylko gaśnicą do urządzeń elektrycznych, po opuszczeniu pantografu."
+      ],
+      "kompletne": true,
+      "strony": [10]
+    },
+    {
+      "id": "pantograf",
+      "tytul": "Pantograf iskrzy / traci kontakt",
+      "objawy": ["iskrzenie na sieci", "przerwy w zasilaniu"],
+      "przyczyny": ["zużyte wkładki węglowe", "uszkodzony ślizgacz", "zły docisk (norma 69±7 N)"],
+      "kroki": [
+        "Jedź ostrożnie bez gwałtownego poboru prądu, zgłoś usterkę.",
+        "Przy uszkodzeniu mechanicznym – opuść pantograf i zatrzymaj się."
+      ],
+      "kompletne": true,
+      "strony": [8, 10, 11]
+    },
+    {
+      "id": "przegrzanie_silnikow",
+      "tytul": "Przegrzanie silników trakcyjnych",
+      "objawy": ["zapach przegrzania", "zadziałanie zabezpieczeń po długim podjeździe"],
+      "przyczyny": ["przeciążenie (>150 A ciągle, >314 A przez 30 s)", "brak chłodzenia wymuszonego"],
+      "kroki": ["Zgłoś usterkę.", "Sprawdź, czy słychać wentylatory chłodzenia."],
+      "kompletne": false,
+      "strony": [18, 19]
+    }
+  ],
+  "zasady_bezpieczenstwa": [
+    "Odłącznik liniowy OLT-198 przełączaj wyłącznie w stanie bezprądowym.",
+    "Do pracy przy obwodzie głównym: odłącznik otwarty + pantograf opuszczony.",
+    "Pantograf opuszcza się linką z kabiny, blokowaną zamkiem linki.",
+    "Obwód główny 600 V DC (do 720 V); sterowanie 24–40 V DC."
+  ],
+  "lokalizacje": {
+    "dach": ["pantograf OTK-1", "odgromnik"],
+    "podwozie": ["stycznik liniowy SUT-300 (SM)"],
+    "pomost_przedni": ["przekaźnik samoczynnego rozruchu PSR (PST-257a)"],
+    "nad_drzwiami": ["tablice TDPm", "przekaźniki drzwi PD1–PD4 (PSF-534)", "maszyna drzwiowa (silnik PASOřc12 32 V)"],
+    "pod_pudlem": ["przetwornica PTA-44", "bateria akumulatorów 5x5 6G100H", "regulator napięcia RNT-731", "przekształtnik 40/24 V (PtR)"],
+    "stanowisko_motorniczego": ["pulpit (łączniki ŻR/ŻOT/ŁLW..., lampki ŻSM1/LSP1/LSS1/LS21/LSD1/LSJ/LSK)", "nastawnik DAT-681 z rezystorem GRS-325", "pedały jazdy/hamowania/czuwaka", "wycieraczka (silnik MWS 24 V)"],
+    "wozki": ["4 silniki LTa-220", "4 hamulce szczękowe + luzowniki HT-3", "4 hamulce szynowe HS-3"],
+    "skrzynia_aparatowa": ["TSK3b", "TSK4", "TSK5b", "TDM", "TRMRr", "TZA1/2", "SG4 (SU 320 Tr)", "silnik rozrusznika PZSOb12a"],
+    "skrzynia_rozrusznika": ["rozrusznik GBT-373", "rezystory wstępne AZT-151 RR1–RR3"],
+    "szafka_aparatowa": ["TBN", "TBW", "TŁS", "TSR7", "TSR8", "TAP4", "TAP5b", "TP2b/TP21b", "TDg", "TŁO", "TRPSR1"]
+  }
+}
