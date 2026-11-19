@@ -127,6 +127,47 @@
 
 ---
 
+## 3A. Szafa aparatowa za kabiną – przełączniki i izolowanie uszkodzeń
+
+> ⚠️ **ŹRÓDŁO / WERYFIKACJA.** Dostępna część I maszynopisu podaje tylko *spis* aparatów na tablicach, bez opisu działania przełączników sterowniczych ani procedur awaryjnych. **Dokładne funkcje i pozycje łączników ŁGM, ŁS, ŁRA, ŁDG oraz procedury izolowania (odcięcia) uszkodzonego wagonu w ukrotnieniu są w części II opracowania i w instrukcji ruchowej przewoźnika.** Poniżej – zasada ogólna wynikająca z budowy; **pozycje łączników i kolejność czynności potwierdź z instrukcją ruchową.**
+
+### Co jest w szafie za kabiną
+- **TBW** – bezpieczniki / wyłączniki **wysokiego napięcia (obwód główny 600 V):** B1–B29; w nowszych wagonach samoczynne wyłączniki instalacyjne **S-161**; wyłączniki nadmiarowe **WN1–WN3**.
+- **TBN** – bezpieczniki **niskiego napięcia** + **odłącznik akumulatorów ODAk (ON-2)**.
+- **TŁS – przełączniki sterownicze:** **ŁGM, ŁS, ŁRA** (w nowszych także **ŁDG**) + bezpiecznik B19; na nowszych 6 lampek kontrolnych (LSM2, LSP2, LSS2, LSZ2, LSD2, LSJ2).
+- Ponadto: TRPSR1 (rezystory PSR), TAP5b, TP2b / TP-21b, TDg, TŁO (ogrzewanie), TSR7 (nowsze).
+
+### 3.10 Uszkodzenie rozrusznika (GBT-373)
+**Rola:** rozrusznik (bęben, 99 pozycji, silnik rozrusznika PZSOb12a + sprzęgło cierne) płynnie zmienia rezystancję przy **rozruchu i hamowaniu ED**. Bez niego wagon normalnie nie rusza ani nie hamuje elektrodynamicznie.
+**Objawy:** brak rozruchu mimo pedału, brak hamowania ED, nienaturalny dźwięk/zablokowanie napędu bębna, lampka **LSJ** gaśnie (zakłócenie jazdy).
+**Postępowanie (zasada):**
+1. Zdejmij nogę z pedałów; sprawdź, czy inne wagony/tramwaje jadą (to nie napięcie sieci).
+2. **Hamuj hamulcem szynowym / czuwakiem** (działa niezależnie od rozrusznika).
+3. **Jazda sparowana:** prowadź z **wagonu sprawnego**; uszkodzony wagon wymaga **odcięcia jego obwodu rozrządu** – ⚠️ sposób (przełączniki w szafie) wg instrukcji ruchowej.
+4. **Pojedynczy wagon:** zjazd / holowanie. Przy holowaniu **odhamuj luzowniki ręcznie** (dźwigienki w poziom).
+
+### 3.11 Spalenie / zwarcie silnika trakcyjnego (LTa-220)
+**Układ:** 4 silniki w **2 grupach po 2** (szereg → równolegle przez styczniki SG). Zwarcie lub przepalenie uzwojenia → duży prąd → **zadziała stycznik liniowy SUT-300 (nadprąd ~600 A)** lub przepali się zabezpieczenie WN.
+**Objawy:** **swąd/dym spod wagonu**, iskrzenie, **stycznik liniowy wybija zaraz po ruszeniu** (patrz 3.1), możliwe zadziałanie bezpieczników WN (TBW).
+**Postępowanie:**
+1. **Nie ponawiaj prób jazdy** – powtarzalne wybijanie stycznika = prawdopodobne zwarcie/uszkodzenie silnika.
+2. Dym/swąd/iskrzenie → postępuj jak przy **pożarze (3.6): opuść pantograf**, w razie potrzeby ewakuacja.
+3. Zgłoś usterkę, wezwij pogotowie techniczne.
+4. **Odłączenie uszkodzonej grupy silników** (by dojechać na drugiej grupie) jest czynnością przewidzianą w instrukcji ruchowej / warsztatowej – ⚠️ **nie wykonuj „na czucie"**; przy podejrzeniu zwarcia obowiązuje opuszczenie pantografu i wezwanie pomocy.
+
+### 3.12 Uszkodzenie przetwornicy w jednym z wagonów (jazda sparowana)
+**Ważne:** **każdy wagon ma własną przetwornicę PTA-44 (40 V) i własną baterię akumulatorów.** W ukrotnieniu złącza międzywagonowe łączą **obwody rozrządu (sterowania)**, natomiast **zasilanie niskiego napięcia (40 V / ładowanie akumulatorów) jest lokalne** dla każdego wagonu.
+**Skutek awarii przetwornicy w jednym wagonie:**
+- ten wagon pracuje **tylko na swoich akumulatorach** (czas ograniczony); **ŻSM1 świeci** (przetwornica nie pracuje), **LSP1 świeci ciągle** (brak ładowania);
+- gdy akumulatory się rozładują → **zanik napięcia sterowania w tym wagonie → samoczynne hamowanie II stopnia** (luzowniki bez zasilania) i unieruchomienie wagonu.
+**Postępowanie (zasada):**
+1. **Odciąż niskie napięcie uszkodzonego wagonu:** wyłącz zbędne odbiorniki (ogrzewanie ŻOT/ŻOM/ŻOS, część oświetlenia) – przedłużasz pracę akumulatorów.
+2. **Planuj zjazd zanim akumulatory padną** – nie jedź „do skutku".
+3. Zgłoś dyspozytorowi; dalej jedź za jego zgodą, z ograniczeniami.
+4. ⚠️ Ewentualne **awaryjne zasilanie krzyżowe** (czy sprawny wagon może podać NN do uszkodzonego przez złącza) zależy od schematu z **części II** – **nie zakładaj, że jest możliwe** bez potwierdzenia w instrukcji ruchowej.
+
+---
+
 ## 4. Ściąga – gdzie co jest (wg rozdz. 14 – tablice aparatowe)
 
 **Szafa aparatowa (tablice):** TBN (bezpieczniki NN + odłącznik akumulatorów ODAk), TBW (bezpieczniki WN / wyłączniki S-161), TŁS (przełączniki sterownicze + lampki), TSR7 (nowsze), TAP5b (przekaźniki PUN/PUP/PUS), TP2b lub TP-21b (przekaźniki jazdy/kierunkowskazów), TDg (lampki, starsze), TŁO (ogrzewanie, nowsze), TRPSR1 (rezystory PSR)

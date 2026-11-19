@@ -105,6 +105,51 @@
       "kroki": ["Zgłoś usterkę.", "Sprawdź, czy słychać wentylatory chłodzenia."],
       "kompletne": false,
       "strony": [18, 19]
+    },
+    {
+      "id": "uszkodzenie_rozrusznika",
+      "tytul": "Uszkodzenie rozrusznika (GBT-373)",
+      "objawy": ["brak rozruchu mimo pedału", "brak hamowania elektrodynamicznego", "zablokowany/halasujacy naped bebna", "lampka LSJ gasnie"],
+      "przyczyny": ["uszkodzenie bebna rozrusznika / silnika PZSOb12a / sprzegla ciernego", "przerwa w obwodzie rozruchu"],
+      "kroki": [
+        "Zdejmij noge z pedalow; sprawdz, czy inne wagony jada (to nie napiecie sieci).",
+        "Hamuj hamulcem szynowym / czuwakiem (dziala niezaleznie od rozrusznika).",
+        "Jazda sparowana: prowadz z wagonu sprawnego; uszkodzony wymaga odciecia obwodu rozrzadu [pozycje lacznikow wg instrukcji ruchowej].",
+        "Pojedynczy wagon: zjazd / holowanie, luzowniki odhamuj recznie."
+      ],
+      "kompletne": false,
+      "weryfikacja": "Procedura izolowania w ukrotnieniu - czesc II / instrukcja ruchowa",
+      "strony": [55, 60]
+    },
+    {
+      "id": "spalenie_silnika",
+      "tytul": "Spalenie / zwarcie silnika trakcyjnego",
+      "objawy": ["swad / dym spod wagonu", "iskrzenie", "stycznik liniowy wybija zaraz po ruszeniu", "zadzialanie bezpiecznikow WN"],
+      "przyczyny": ["zwarcie lub przepalenie uzwojenia silnika LTa-220", "zadzialanie SUT-300 przy nadpradzie ~600 A"],
+      "kroki": [
+        "Nie ponawiaj prob jazdy - powtarzalne wybijanie stycznika = prawdopodobne zwarcie.",
+        "Dym/swad/iskrzenie -> postepuj jak przy pozarze: opusc pantograf, w razie potrzeby ewakuacja.",
+        "Zglos usterke, wezwij pogotowie techniczne.",
+        "Odlaczenie uszkodzonej grupy silnikow - tylko wg instrukcji ruchowej / warsztatowej, nie 'na czucie'."
+      ],
+      "kompletne": false,
+      "weryfikacja": "Odlaczanie grupy silnikow - czesc II / instrukcja ruchowa",
+      "strony": [16, 34]
+    },
+    {
+      "id": "przetwornica_ukrotnienie",
+      "tytul": "Awaria przetwornicy w jednym z wagonow (jazda sparowana)",
+      "objawy": ["ZSM1 swieci w jednym wagonie", "LSP1 swieci ciagle (brak ladowania)", "po czasie samoczynne hamowanie II stopnia tego wagonu"],
+      "przyczyny": ["awaria przetwornicy PTA-44 danego wagonu", "kazdy wagon ma lokalne zasilanie NN (przetwornica + bateria); ukrotnienie laczy tylko obwody rozrzadu"],
+      "kroki": [
+        "Odciaz NN uszkodzonego wagonu: wylacz ogrzewanie i czesc oswietlenia (przedluzasz prace akumulatorow).",
+        "Planuj zjazd zanim akumulatory sie rozladuja - nie jedz 'do skutku'.",
+        "Zglos dyspozytorowi; dalej za jego zgoda, z ograniczeniami.",
+        "Zasilanie krzyzowe NH miedzy wagonami - nie zakladaj, ze mozliwe bez potwierdzenia w czesci II."
+      ],
+      "kompletne": false,
+      "weryfikacja": "Mozliwosc zasilania krzyzowego - czesc II / instrukcja ruchowa",
+      "strony": [112, 118, 124]
     }
   ],
   "zasady_bezpieczenstwa": [
