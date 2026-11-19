@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Konstal 805Na — instrukcja obsługi (próbna)</title>
+<style>
+  :root{
+    --navy:#17365d;      /* kolor firmowy (placeholder – do ustalenia barwy MPK) */
+    --accent:#e4761b;    /* kolor akcentu */
+    --ink:#1a1a1a;
+    --grey:#777;
+    --line:#333;
+    --box:#e9e9e9;
+  }
+  @page{
+    size:210mm 148mm;            /* A5 poziomo */
+    margin:9mm 12mm 10mm 12mm;
+  }
+  @page cover{ margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"Fira Sans Condensed","Open Sans Condensed",sans-serif;
+    font-size:9.3pt; line-height:1.28; color:var(--ink);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .chapter{ page-break-before:always; position:relative; padding-right:15mm; }
+  .cover{ page:cover; page-break-after:always; position:relative; width:210mm; height:148mm; overflow:hidden; }
+
+  /* ---------- OKŁADKA ---------- */
+  .cover .photo{ position:absolute; inset:0;
+    background:linear-gradient(135deg,#2a3c5a 0%,#0e1c30 100%); }
+  .cover .tram{ position:absolute; left:8mm; bottom:7mm; color:#2f4a6a; }
+  .cover .badge{ position:absolute; top:0; right:0; width:120mm; padding:10mm 12mm 8mm 14mm;
+    background:var(--navy); color:#fff; clip-path:polygon(14mm 0,100% 0,100% 100%,0 100%); }
+  .cover .badge h1{ margin:0; font-size:34pt; font-weight:700; letter-spacing:1px; line-height:0.98; }
+  .cover .badge .sub{ margin-top:3mm; font-size:13pt; letter-spacing:3px; color:var(--accent); font-weight:700; }
+  .cover .foot{ position:absolute; left:8mm; bottom:7mm; color:#c9d4e4; font-size:8pt; letter-spacing:1px; }
+  .cover .mpk{ position:absolute; left:8mm; top:9mm; color:#fff; font-size:11pt; font-weight:700; letter-spacing:2px;
+    border:1.5px solid var(--accent); padding:2mm 4mm; }
+
+  /* ---------- PASEK ZAKŁADEK ---------- */
+  .tabs{ position:absolute; top:0; right:0; width:13mm; height:129mm; }
+  .tab{ height:15mm; margin-bottom:1mm; border:0.5pt solid #999;
+    border-radius:2mm 0 0 2mm; background:#fff; color:#888;
+    writing-mode:vertical-rl;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-size:6.3pt; font-weight:700; text-transform:uppercase; line-height:1.05; padding:1mm 0.5mm; }
+  .tab.on{ background:#000; color:#fff; border-color:#000; }
+
+  /* ---------- STRONA TYTUŁOWA ROZDZIAŁU ---------- */
+  .chead{ text-align:center; margin:2mm 0 4mm; }
+  .chead .num{ font-size:11pt; color:var(--accent); font-weight:700; letter-spacing:2px; }
+  .chead h2{ margin:1mm 0 0; font-size:23pt; font-weight:700; letter-spacing:3px;
+    text-transform:uppercase; color:#fff;
+    -webkit-text-stroke:0.5pt var(--line); text-shadow:1px 1px 0 #bbb; }
+
+  h3{ font-size:10pt; text-transform:uppercase; font-weight:700; margin:2.5mm 0 1mm;
+    border-bottom:1.2pt solid var(--line); padding-bottom:0.5mm; break-after:avoid; }
+  h4{ font-size:9pt; font-weight:700; margin:1.8mm 0 0.6mm; color:#000; break-after:avoid; }
+  p{ margin:0 0 1.4mm; text-align:justify; }
+  .cols{ column-count:3; column-gap:5mm; column-rule:0.4pt solid #ccc; }
+  .cols2{ column-count:2; column-gap:6mm; }
+  ul{ margin:0 0 1.5mm; padding-left:4mm; list-style:none; }
+  li{ margin-bottom:0.6mm; position:relative; padding-left:3.2mm; }
+  li::before{ content:"\276F"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:0.3mm; }
+  li.dash::before{ content:"\2013"; color:var(--line); }
+  b,strong{ font-weight:700; }
+  .key{ font-weight:700; background:#f0f0f0; padding:0 1mm; border-radius:1mm; }
+
+  /* ---------- RAMKI ---------- */
+  .warn,.info{ background:var(--box); border:0.5pt solid #bbb; border-radius:1mm;
+    margin:1.5mm 0; break-inside:avoid; font-size:8.6pt; }
+  .warn .bar{ background:#333; color:#fff; font-style:italic; font-weight:700;
+    text-transform:uppercase; letter-spacing:1px; padding:0.6mm 2mm; font-size:8pt; }
+  .warn .body,.info .body{ padding:1.2mm 2mm 1.5mm 8mm; position:relative; font-weight:600; font-style:italic; }
+  .warn .body::before{ content:"\26A0"; position:absolute; left:2mm; top:1mm; font-size:11pt; font-style:normal; }
+  .info{ border-left:3pt solid var(--accent); }
+  .info .body::before{ content:"\2139"; position:absolute; left:2mm; top:1mm; font-size:11pt; font-style:normal; color:var(--accent); }
+
+  table{ border-collapse:collapse; width:100%; font-size:8.4pt; margin:1mm 0 2mm; break-inside:avoid; }
+  th{ background:#2a2a2a; color:#fff; text-align:left; padding:0.8mm 1.4mm; font-weight:700; }
+  td{ border-bottom:0.4pt solid #bbb; padding:0.7mm 1.4mm; vertical-align:top; }
+  tr:nth-child(even) td{ background:#f4f4f4; }
+
+  .toc{ margin:4mm auto 0; width:70%; }
+  .toc .row{ display:flex; align-items:baseline; margin-bottom:1.2mm; font-size:10pt; }
+  .toc .row .t{ text-transform:uppercase; font-weight:700; }
+  .toc .row .d{ flex:1; border-bottom:1pt dotted #888; margin:0 1.5mm 1pt; }
+  .disc{ font-size:7.6pt; color:var(--grey); font-style:italic; margin-top:2mm; }
+
+  /* numer strony / stopka */
+  .pg{ position:running(pg); }
+  @page{ @bottom-right{ content:counter(page); font-family:"Fira Sans Condensed"; font-weight:700; font-size:10pt; color:#000; }
+         @bottom-left{ content:"Konstal 805Na \2014 instrukcja obsługi (próbna)"; font-size:6.5pt; color:#999; } }
+  @page cover{ @bottom-right{content:none;} @bottom-left{content:none;} }
+</style>
+</head>
+<body>
+
+<!-- ============ OKŁADKA ============ -->
+<section class="cover">
+  <div class="photo"></div>
+  <div class="mpk">MPK ŁÓDŹ</div>
+  <div class="badge">
+    <h1>KONSTAL<br>805Na</h1>
+    <div class="sub">INSTRUKCJA OBSŁUGI</div>
+  </div>
+  <div class="foot">Materiał szkoleniowy · wydanie próbne · opracowano na podstawie maszynopisu „Opis aparatury elektrycznej wagonu 805Na”</div>
+</section>
+
+<!-- ============ 1. STANOWISKO ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab on">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 1</div><h2>Stanowisko motorniczego</h2></div>
+  <div class="cols">
+    <h3>Pulpit i pedały</h3>
+    <ul>
+      <li class="dash"><b>Pedały</b> (typowo od prawej): jazdy, hamowania, czuwak.</li>
+      <li class="dash"><b>Drążek nastawnika kierunku:</b> przód / 0 / tył.</li>
+      <li class="dash"><b>Łącznik jazdy ŻR</b> pełni rolę <b>stacyjki</b> (kluczyk).</li>
+    </ul>
+    <div class="info"><div class="body">Blokada: kierunek przestawisz tylko przy pedałach w „0"; pedał wciśniesz tylko gdy kierunek jest dokładnie w „przód"/„tył".</div></div>
+    <h4>Łączniki pulpitu</h4>
+    <ul>
+      <li>ŻOT — ogrzewanie tramwaju</li>
+      <li>ŻOM / ŻOS — ogrzewanie stanowiska / szyb</li>
+      <li>ŁLW / ŁLJ / ŁLM — oświetlenie wewn. / tablic / stanowiska</li>
+      <li>ŁLZ — oświetlenie zewn. (0 / pozycyjne / +reflektor+stopnie)</li>
+      <li>ŁRDK — reflektor (mijania / drogowe)</li>
+      <li>ŻWS — wycieraczka (0 / I / II)</li>
+      <li>łącznik przetwornicy, drzwi, świateł awaryjnych, kierunkowskazy</li>
+    </ul>
+    <h3>Nastawnik jazdy DAT-681</h3>
+    <p>Zespół dźwigni jazdy, hamowania i nawrotnika (kierunku). Rozłączniki typu CUM-323 sterowane krzywkami. Na nastawniku bocznik pomiarowy 400 A.</p>
+    <p><b>Rozrząd pośredni, automatyczny:</b> pedał jazdy zadaje prąd silników (głębiej = większy prąd = szybszy rozruch); przekaźnik samoczynnego rozruchu pilnuje prądu zależnie od wciśnięcia pedału.</p>
+    <h3>Wycieraczka</h3>
+    <p>Silnik MWS 24 V, dwie prędkości (łącznik ŻWS: 0/I/II). Pióro samo dojeżdża do spoczynku po wyłączeniu.</p>
+  </div>
+</section>
+
+<!-- ============ 2. BEZPIECZEŃSTWO ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab on">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 2</div><h2>Bezpieczeństwo</h2></div>
+  <div class="cols">
+    <div class="warn"><div class="bar">Uwaga</div><div class="body">Odłącznik liniowy OLT-198 przełączaj wyłącznie w stanie BEZPRĄDOWYM. Najpierw zdejmij nogę z pedałów i odczekaj, aż wyłączy się stycznik liniowy. To nie jest wyłącznik pod obciążeniem.</div></div>
+    <h3>Napięcia w wagonie</h3>
+    <table>
+      <tr><th>Obwód</th><th>Napięcie</th></tr>
+      <tr><td>Główny (trakcyjny)</td><td>600 V DC (400–720 V)</td></tr>
+      <tr><td>Izolacja obw. głównego</td><td>800 V</td></tr>
+      <tr><td>Sterowanie</td><td>24–40 V DC</td></tr>
+      <tr><td>Silnik rozrusznika</td><td>32 V</td></tr>
+      <tr><td>Przekaźniki drzwi</td><td>36 V</td></tr>
+    </table>
+    <h3>Zasady</h3>
+    <ul>
+      <li>Do pracy przy obwodzie głównym: <b>odłącznik otwarty + pantograf opuszczony</b> (widoczna przerwa izolacyjna).</li>
+      <li>Pantograf opuszcza się <b>linką z kabiny</b>, blokowaną zamkiem linki.</li>
+      <li>Odgromnik na dachu po uderzeniu pioruna może być uszkodzony — zgłoś każde wyładowanie w pobliżu.</li>
+    </ul>
+    <div class="info"><div class="body">Zanik napięcia sterowania = wagon samoczynnie hamuje (II stopień hamulców szczękowych). To zabezpieczenie, nie usterka hamulca.</div></div>
+  </div>
+</section>
+
+<!-- ============ 3. PRZYGOTOWANIE I JAZDA ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab on">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 3</div><h2>Przygotowanie i jazda</h2></div>
+  <div class="cols">
+    <h3>Jak porusza się wagon</h3>
+    <p>Pantograf OTK-1 zbiera prąd z sieci 600 V. Stycznik liniowy SUT-300 włącza obwód główny. Prąd zasila 4 silniki LTa-220 (2 grupy po 2).</p>
+    <p><b>Rozruch:</b> rozrusznik GBT-373 (bęben, 99 pozycji) płynnie zmniejsza rezystancję. Silniki najpierw <b>szeregowo</b>, przy ok. 200 V na rozruszniku przekaźnik PUR przełącza grupy na <b>równoległe</b> (oszczędność ~6%).</p>
+    <h3>Hamowanie — cztery rodzaje</h3>
+    <ul>
+      <li class="dash"><b>Elektrodynamiczny</b> — podstawowy, przez silniki (pedał hamowania).</li>
+      <li class="dash"><b>Szczękowy I stopień</b> — dołączany sam przy małych prędkościach.</li>
+      <li class="dash"><b>Szczękowy II stopień</b> — pełna siła przy zaniku napięcia lub po puszczeniu czuwaka.</li>
+      <li class="dash"><b>Szynowy HS-3</b> — elektromagnes do szyny, siła 42 kN, nagłe hamowanie/czuwak.</li>
+    </ul>
+    <div class="warn"><div class="bar">Uwaga</div><div class="body">Puszczenie czuwaka = hamowanie nagłe: szynowe + II stopień szczękowych + elektrodynamiczne jednocześnie.</div></div>
+    <h3>Sterowanie ukrotnione</h3>
+    <p>Kilka wagonów z kabiny pierwszego — złącza międzywagonowe (PSK 36-stykowe lub KOL/KOM). Blokady zależne od stanu aparatów i urządzeń pomocniczych.</p>
+  </div>
+</section>
+
+<!-- ============ 4. SYGNALIZACJA ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab on">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 4</div><h2>Sygnalizacja i kontrolki</h2></div>
+  <table>
+    <tr><th>Lampka</th><th>Stan normalny</th><th>Zaświecenie / zgaśnięcie oznacza</th></tr>
+    <tr><td><b>ŻSM1</b> przetwornica</td><td>nie świeci</td><td>świeci = brak pracy / awaria silnika przetwornicy</td></tr>
+    <tr><td><b>LSP1</b> napięcie 40 V / poślizg</td><td>nie świeci</td><td>miga = poślizg kół; świeci ciągle = zanik napięcia prądnicy / przepalony B8, B15, B16 / awaria przetwornicy</td></tr>
+    <tr><td><b>LSS1</b> rezerwa ham. szynowych</td><td>świeci (przód/tył)</td><td>zgaśnięcie = niesprawny rezerwowy obwód hamulców szynowych (B19 / PLSS / ŁLSS)</td></tr>
+    <tr><td><b>LS21</b> luzowniki szczękowe</td><td>nie świeci</td><td>świeci = którykolwiek hamulec szczękowy zahamowany</td></tr>
+    <tr><td><b>LSD1</b> drzwi</td><td>świeci</td><td>gaśnie gdy choć jedne drzwi otwarte</td></tr>
+    <tr><td><b>LSJ</b> jazda</td><td>świeci</td><td>gaśnie przy zakłóceniu rozruchu/hamowania w którymś wagonie</td></tr>
+    <tr><td><b>LSJ1</b> (805Na/P3)</td><td>nie świeci</td><td>świeci = niesprawny wagon (odwrotnie do LSJ)</td></tr>
+    <tr><td><b>LSK</b> kierunkowskazy</td><td>pulsuje</td><td>pulsowanie przy włączonych kierunkowskazach</td></tr>
+  </table>
+  <div class="info"><div class="body">Dzwonek zewnętrzny (HD3500-06) poza sygnałem ostrzegawczym sygnalizuje też zanik napięcia zasilania awaryjnego hamulców szynowych.</div></div>
+</section>
+
+<!-- ============ 5. W RAZIE AWARII ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab on">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 5</div><h2>W razie awarii</h2></div>
+  <div class="warn"><div class="bar">Kolejność ogólna</div><div class="body">1) zatrzymaj bezpiecznie → 2) zabezpiecz wagon (hamulec, światła awaryjne) → 3) powiadom dyspozytora → 4) proste czynności sprawdzające → 5) zjazd / pogotowie techniczne.</div></div>
+  <div class="cols">
+    <h4>Utrata napędu — „wybił" stycznik liniowy</h4>
+    <p>Zadziałał przekaźnik PGA-115 w SUT-300 (prąd &gt; ~600 A). Reset = przerwanie i ponowne podanie sterowania: wyłącz i załącz łącznik ŻR. Ruszaj łagodnie. Jeśli wybija ponownie — nie próbuj dalej (możliwe zwarcie), zgłoś i wezwij pogotowie.</p>
+    <h4>Szarpanie / brak przyspieszenia</h4>
+    <p>Rozregulowany PSR, usterka silnika rozrusznika/sprzęgła, styczniki SG/PUR, niskie napięcie sieci (&lt;400 V). Sprawdź, czy inne tramwaje jadą normalnie. Regulacja PSR — warsztat.</p>
+    <h4>Samoczynne mocne hamowanie (II stopień)</h4>
+    <p>Zanik napięcia 40/24 V. Sprawdź: ŻSM1/LSP1, odłącznik akumulatorów ODAk (TBN), bezpieczniki NN; przekształtnik 40/24 V po zwarciu zresetuj (wył./zał.). Brak napięcia — zjazd, drzwi/luzowniki odhamuj ręcznie.</p>
+    <h4>Usterka drzwi</h4>
+    <p>Maszyna drzwiowa zasilana z przetwornicy — przy zaniku napięcia drzwi otwiera się ręcznie. Otwarte drzwi blokują rozruch.</p>
+    <h4>Pantograf iskrzy / traci kontakt</h4>
+    <p>Docisk 69±7 N. Jedź bez gwałtownego poboru prądu; przy uszkodzeniu mechanicznym opuść pantograf.</p>
+    <div class="warn"><div class="bar">Pożar / dym / swąd</div><div class="body">Zatrzymaj, OPUŚĆ PANTOGRAF (linka), ewakuuj pasażerów, powiadom dyspozytora i straż. Gaś tylko gaśnicą do urządzeń elektrycznych po opuszczeniu pantografu.</div></div>
+  </div>
+</section>
+
+<!-- ============ 6. APARATURA ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab on">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 6</div><h2>Aparatura — gdzie co jest</h2></div>
+  <div class="cols">
+    <h4>Dach</h4><ul><li>pantograf OTK-1, odgromnik</li></ul>
+    <h4>Podwozie</h4><ul><li>stycznik liniowy SUT-300 (SM)</li></ul>
+    <h4>Pod pudłem</h4><ul><li>przetwornica PTA-44, bateria akumulatorów, regulator RNT-731, przekształtnik 40/24 V</li></ul>
+    <h4>Pomost przedni</h4><ul><li>przekaźnik samoczynnego rozruchu PSR (PST-257a)</li></ul>
+    <h4>Nad drzwiami</h4><ul><li>tablice TDPm, przekaźniki drzwi PD1–PD4 (PSF-534)</li></ul>
+    <h4>Szafa aparatowa</h4><ul><li>TBN, TBW, TŁS, TSR7, TAP5b, TP2b/TP-21b, TDg, TŁO, TRPSR1</li></ul>
+    <h4>Skrzynia aparatowa</h4><ul><li>TSK4, TSK5b, TSK-3b, TSR8, TAP4, TDM, TRMRr, TZA1/2, SG4, silnik rozrusznika</li></ul>
+  </div>
+  <table>
+    <tr><th>Grupa styczników</th><th>Oznaczenia (tablica)</th></tr>
+    <tr><td>Jazdy</td><td>SJ1–SJ3 (TSK-3b)</td></tr>
+    <tr><td>Hamowania</td><td>SH1, SH2 (TSK4), SH3 (TSK-3b)</td></tr>
+    <tr><td>Rozruchowe</td><td>SR1–SR2 (TSK-3b), SR3–SR5 (TSK5b), SR6–SR7 (TSK4)</td></tr>
+    <tr><td>Grup silników</td><td>SG1–SG3 (TSK-3b), SG4 (skrzynia)</td></tr>
+    <tr><td>Liniowe</td><td>SL1/SL2 (TSR8) lub SL (TSR7) + SM (podwozie)</td></tr>
+    <tr><td>Hamulców szynowych</td><td>SZH1, SZH2 (TAP4)</td></tr>
+  </table>
+</section>
+
+<!-- ============ 7. DANE TECHNICZNE ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab on">Dane techniczne</div><div class="tab">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 7</div><h2>Dane techniczne</h2></div>
+  <div class="cols2">
+    <table>
+      <tr><th>Zespół</th><th>Dane</th></tr>
+      <tr><td>Sieć</td><td>600 V DC (400–720 V)</td></tr>
+      <tr><td>Silniki trakcyjne</td><td>4 × LTa-220, 40 kW ciągłe (41,5 kW godz.), maks. 4200 obr/min</td></tr>
+      <tr><td>Zabezpieczenie linii</td><td>600 A (SUT-300)</td></tr>
+      <tr><td>Pantograf OTK-1</td><td>400 A ciągłe / 600 A chwilowe, 100 kg</td></tr>
+      <tr><td>Rozrusznik GBT-373</td><td>99 pozycji, 3,3 Ω gł. / 106,4 Ω wybieg., 170 kg</td></tr>
+      <tr><td>Bocznik</td><td>I stopień 78% / II stopień 63% wzbudzenia</td></tr>
+      <tr><td>Sterowanie</td><td>24–40 V DC</td></tr>
+      <tr><td>Hamulce szynowe HS-3</td><td>4 szt., 35 V, siła 42 kN, 130 kg</td></tr>
+      <tr><td>Przetwornica PTA-44</td><td>silnik 3,8 kW/600 V, prądnica 1,8 kW/40 V/45 A, 280 kg</td></tr>
+      <tr><td>Akumulatory</td><td>5×5 6G100H, 25 ogniw Cd-Ni, 100 Ah, ład. 25 A/6 h</td></tr>
+      <tr><td>Przekształtnik 40/24 V</td><td>wyjście 28 V, 25 A, 16 kg</td></tr>
+      <tr><td>Nastawnik DAT-681</td><td>nawrotnik 800 V/200 A, 50 kg</td></tr>
+      <tr><td>Silnik drzwi PASOřc12</td><td>185 W, 32 V, przełożenie 187,2</td></tr>
+      <tr><td>Grzejniki</td><td>pasażerów 700 W, kabiny 600 W, szyb 250 W</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 8. SKOROWIDZ ============ -->
+<section class="chapter">
+  <div class="tabs">
+    <div class="tab">Stanowisko motor.</div><div class="tab">Bezpieczeństwo</div>
+    <div class="tab">Przygotowanie i jazda</div><div class="tab">Sygnalizacja</div>
+    <div class="tab">W razie awarii</div><div class="tab">Aparatura</div>
+    <div class="tab">Dane techniczne</div><div class="tab on">Skorowidz</div>
+  </div>
+  <div class="chead"><div class="num">ROZDZIAŁ 8</div><h2>Skorowidz</h2></div>
+  <div class="toc">
+    <div class="row"><span class="t">Stanowisko motorniczego</span><span class="d"></span><span>1</span></div>
+    <div class="row"><span class="t">Bezpieczeństwo</span><span class="d"></span><span>2</span></div>
+    <div class="row"><span class="t">Przygotowanie i jazda</span><span class="d"></span><span>3</span></div>
+    <div class="row"><span class="t">Sygnalizacja i kontrolki</span><span class="d"></span><span>4</span></div>
+    <div class="row"><span class="t">W razie awarii</span><span class="d"></span><span>5</span></div>
+    <div class="row"><span class="t">Aparatura — gdzie co jest</span><span class="d"></span><span>6</span></div>
+    <div class="row"><span class="t">Dane techniczne</span><span class="d"></span><span>7</span></div>
+  </div>
+  <p class="disc">Wydanie próbne. Materiał szkoleniowy opracowany na podstawie maszynopisu MPK Łódź „Opis aparatury elektrycznej wagonu 805Na" (część I, rozdz. 1–24). Obowiązujące są przepisy i instrukcje przewoźnika oraz polecenia dyspozytora. Kolorystyka okładki i zakładek — do ustalenia (barwy MPK Łódź).</p>
+</section>
+
+</body>
+</html>

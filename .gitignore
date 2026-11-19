@@ -10,3 +10,7 @@ nowe_zdjecia/
 # Środowiska / śmieci
 .venv*/
 __pycache__/
+
+# wyjatek: probny PDF instrukcji (zrodlo HTML + wyrenderowany PDF)
+!instrukcja/pdf/
+!instrukcja/pdf/*.pdf
