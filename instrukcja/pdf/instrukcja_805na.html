@@ -5,16 +5,18 @@
 <title>Konstal 805Na — instrukcja obsługi (próbna)</title>
 <style>
   :root{
-    --navy:#17365d;      /* kolor firmowy (placeholder – do ustalenia barwy MPK) */
-    --accent:#e4761b;    /* kolor akcentu */
+    --red:#d81e2c;       /* czerwień MPK / flaga Łodzi */
+    --red-dark:#a4121d;
+    --yellow:#f6c500;    /* żółć flagi Łodzi */
+    --accent:var(--red); /* akcent tekstowy = czerwień (czytelny na białym) */
     --ink:#1a1a1a;
     --grey:#777;
     --line:#333;
-    --box:#e9e9e9;
+    --box:#ededed;
   }
   @page{
-    size:210mm 148mm;            /* A5 poziomo */
-    margin:9mm 12mm 10mm 12mm;
+    size:148mm 210mm;           /* A5 pionowo */
+    margin:9mm 11mm 10mm 11mm;
   }
   @page cover{ margin:0; }
   *{ box-sizing:border-box; }
@@ -25,42 +27,41 @@
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
   }
   .chapter{ page-break-before:always; position:relative; padding-right:15mm; }
-  .cover{ page:cover; page-break-after:always; position:relative; width:210mm; height:148mm; overflow:hidden; }
+  .cover{ page:cover; page-break-after:always; position:relative; width:148mm; height:210mm; overflow:hidden; }
 
-  /* ---------- OKŁADKA ---------- */
+  /* ---------- OKŁADKA (flaga Łodzi: żółć nad czerwienią) ---------- */
   .cover .photo{ position:absolute; inset:0;
-    background:linear-gradient(135deg,#2a3c5a 0%,#0e1c30 100%); }
-  .cover .tram{ position:absolute; left:8mm; bottom:7mm; color:#2f4a6a; }
-  .cover .badge{ position:absolute; top:0; right:0; width:120mm; padding:10mm 12mm 8mm 14mm;
-    background:var(--navy); color:#fff; clip-path:polygon(14mm 0,100% 0,100% 100%,0 100%); }
-  .cover .badge h1{ margin:0; font-size:34pt; font-weight:700; letter-spacing:1px; line-height:0.98; }
-  .cover .badge .sub{ margin-top:3mm; font-size:13pt; letter-spacing:3px; color:var(--accent); font-weight:700; }
-  .cover .foot{ position:absolute; left:8mm; bottom:7mm; color:#c9d4e4; font-size:8pt; letter-spacing:1px; }
-  .cover .mpk{ position:absolute; left:8mm; top:9mm; color:#fff; font-size:11pt; font-weight:700; letter-spacing:2px;
-    border:1.5px solid var(--accent); padding:2mm 4mm; }
+    background:linear-gradient(180deg,var(--yellow) 0 42%, var(--red) 42% 100%); }
+  .cover .badge{ position:absolute; top:0; left:0; right:0; padding:14mm 12mm 10mm;
+    background:var(--red); color:#fff; border-bottom:4mm solid var(--yellow); }
+  .cover .badge h1{ margin:0; font-size:40pt; font-weight:700; letter-spacing:1px; line-height:0.96; }
+  .cover .badge .sub{ margin-top:4mm; font-size:15pt; letter-spacing:4px; color:var(--yellow); font-weight:700; }
+  .cover .foot{ position:absolute; left:12mm; right:12mm; bottom:8mm; color:#fff; font-size:8pt; letter-spacing:0.5px; }
+  .cover .mpk{ position:absolute; left:12mm; bottom:20mm; color:#fff; font-size:13pt; font-weight:700; letter-spacing:2px;
+    border:2px solid #fff; padding:2mm 5mm; }
 
   /* ---------- PASEK ZAKŁADEK ---------- */
-  .tabs{ position:absolute; top:0; right:0; width:13mm; height:129mm; }
-  .tab{ height:15mm; margin-bottom:1mm; border:0.5pt solid #999;
-    border-radius:2mm 0 0 2mm; background:#fff; color:#888;
+  .tabs{ position:absolute; top:0; right:0; width:13mm; height:191mm; }
+  .tab{ height:22.5mm; margin-bottom:1mm; border:0.5pt solid #bbb;
+    border-radius:2mm 0 0 2mm; background:#f4f4f4; color:#888;
     writing-mode:vertical-rl;
     display:flex; align-items:center; justify-content:center; text-align:center;
-    font-size:6.3pt; font-weight:700; text-transform:uppercase; line-height:1.05; padding:1mm 0.5mm; }
-  .tab.on{ background:#000; color:#fff; border-color:#000; }
+    font-size:6.6pt; font-weight:700; text-transform:uppercase; line-height:1.05; padding:1mm 0.5mm; }
+  .tab.on{ background:var(--red); color:#fff; border-color:var(--red); }
 
   /* ---------- STRONA TYTUŁOWA ROZDZIAŁU ---------- */
   .chead{ text-align:center; margin:2mm 0 4mm; }
   .chead .num{ font-size:11pt; color:var(--accent); font-weight:700; letter-spacing:2px; }
-  .chead h2{ margin:1mm 0 0; font-size:23pt; font-weight:700; letter-spacing:3px;
-    text-transform:uppercase; color:#fff;
+  .chead h2{ margin:1mm 0 0; font-size:17pt; font-weight:700; letter-spacing:1.5px;
+    text-transform:uppercase; color:#fff; line-height:1.05;
     -webkit-text-stroke:0.5pt var(--line); text-shadow:1px 1px 0 #bbb; }
 
   h3{ font-size:10pt; text-transform:uppercase; font-weight:700; margin:2.5mm 0 1mm;
     border-bottom:1.2pt solid var(--line); padding-bottom:0.5mm; break-after:avoid; }
   h4{ font-size:9pt; font-weight:700; margin:1.8mm 0 0.6mm; color:#000; break-after:avoid; }
   p{ margin:0 0 1.4mm; text-align:justify; }
-  .cols{ column-count:3; column-gap:5mm; column-rule:0.4pt solid #ccc; }
-  .cols2{ column-count:2; column-gap:6mm; }
+  .cols{ column-count:2; column-gap:5mm; column-rule:0.4pt solid #ccc; }
+  .cols2{ column-count:1; }
   ul{ margin:0 0 1.5mm; padding-left:4mm; list-style:none; }
   li{ margin-bottom:0.6mm; position:relative; padding-left:3.2mm; }
   li::before{ content:"\276F"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:0.3mm; }
@@ -71,7 +72,7 @@
   /* ---------- RAMKI ---------- */
   .warn,.info{ background:var(--box); border:0.5pt solid #bbb; border-radius:1mm;
     margin:1.5mm 0; break-inside:avoid; font-size:8.6pt; }
-  .warn .bar{ background:#333; color:#fff; font-style:italic; font-weight:700;
+  .warn .bar{ background:var(--red-dark); color:#fff; font-style:italic; font-weight:700;
     text-transform:uppercase; letter-spacing:1px; padding:0.6mm 2mm; font-size:8pt; }
   .warn .body,.info .body{ padding:1.2mm 2mm 1.5mm 8mm; position:relative; font-weight:600; font-style:italic; }
   .warn .body::before{ content:"\26A0"; position:absolute; left:2mm; top:1mm; font-size:11pt; font-style:normal; }
@@ -79,7 +80,7 @@
   .info .body::before{ content:"\2139"; position:absolute; left:2mm; top:1mm; font-size:11pt; font-style:normal; color:var(--accent); }
 
   table{ border-collapse:collapse; width:100%; font-size:8.4pt; margin:1mm 0 2mm; break-inside:avoid; }
-  th{ background:#2a2a2a; color:#fff; text-align:left; padding:0.8mm 1.4mm; font-weight:700; }
+  th{ background:var(--red-dark); color:#fff; text-align:left; padding:0.8mm 1.4mm; font-weight:700; }
   td{ border-bottom:0.4pt solid #bbb; padding:0.7mm 1.4mm; vertical-align:top; }
   tr:nth-child(even) td{ background:#f4f4f4; }
 
